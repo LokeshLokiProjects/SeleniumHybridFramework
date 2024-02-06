@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,12 +108,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="invalidIdValidPassword2">invalidIdValidPassword2</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="invalidIdValidPassword3">invalidIdValidPassword3</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.RegisterTest" class="method navigator-link" hash-for-method="registerAccountTest">registerAccountTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -141,6 +136,21 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">tests.RegisterTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerAccountTest">
+                  </a> <!-- registerAccountTest -->
+                  <span class="method-name">registerAccountTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">tests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -149,20 +159,6 @@
                   <a name="invalidIdValidPassword">
                   </a> <!-- invalidIdValidPassword -->
                   <span class="method-name">invalidIdValidPassword</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="invalidIdValidPassword2">
-                  </a> <!-- invalidIdValidPassword2 -->
-                  <span class="method-name">invalidIdValidPassword2</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="invalidIdValidPassword3">
-                  </a> <!-- invalidIdValidPassword3 -->
-                  <span class="method-name">invalidIdValidPassword3</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -194,6 +190,7 @@
   &lt;test thread-count=&quot;2&quot; parallel=&quot;methods&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.LoginTest&quot;/&gt;
+      &lt;class name=&quot;tests.RegisterTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -207,7 +204,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -233,27 +230,23 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'invalidIdValidPassword')
-data.setCell(0, 2, 'tests.LoginTest')
-data.setCell(0, 3, 1280);
+data.setCell(0, 1, 'registerAccountTest')
+data.setCell(0, 2, 'tests.RegisterTest')
+data.setCell(0, 3, 2028);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validIdInvalidPassword')
+data.setCell(1, 1, 'invalidIdValidPassword')
 data.setCell(1, 2, 'tests.LoginTest')
-data.setCell(1, 3, 1170);
+data.setCell(1, 3, 1323);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'validIdValidPassword')
+data.setCell(2, 1, 'validIdInvalidPassword')
 data.setCell(2, 2, 'tests.LoginTest')
-data.setCell(2, 3, 1126);
+data.setCell(2, 3, 1229);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'invalidIdValidPassword2')
+data.setCell(3, 1, 'validIdValidPassword')
 data.setCell(3, 2, 'tests.LoginTest')
-data.setCell(3, 3, 1073);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'invalidIdValidPassword3')
-data.setCell(4, 2, 'tests.LoginTest')
-data.setCell(4, 3, 1003);
+data.setCell(3, 3, 1215);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -294,56 +287,59 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">invalidIdValidPassword</span>
-                <span class="method-start">3376 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">invalidIdValidPassword2</span>
-                <span class="method-start">3704 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">4659 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">4779 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">4848 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">4940 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">invalidIdValidPassword3</span>
-                <span class="method-start">7829 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
                 <span class="method-name">validIdInvalidPassword</span>
-                <span class="method-start">8247 ms</span>
+                <span class="method-start">3396 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">invalidIdValidPassword</span>
+                <span class="method-start">3517 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">8833 ms</span>
+                <span class="method-start">4627 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">8957 ms</span>
+                <span class="method-start">4732 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">9419 ms</span>
+                <span class="method-start">4841 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.RegisterTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">5016 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">validIdValidPassword</span>
-                <span class="method-start">11998 ms</span>
+                <span class="method-start">7499 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.RegisterTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">registerAccountTest</span>
+                <span class="method-start">7783 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">13125 ms</span>
+                <span class="method-start">8715 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.RegisterTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">9812 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

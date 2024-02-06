@@ -20,27 +20,34 @@ public class RegisterPage {
 	private By continueButton = By.cssSelector("input[value='Continue']");
 	
 	
-	public void enterFirstName(String value) {
+	public RegisterPage enterFirstName(String value) {
 		ElementUtils.sendKeys(enterFirstName, value);
+		return this;
 	}
 	
-	public void enterLastName(String value) {
+	public RegisterPage enterLastName(String value) {
 		ElementUtils.sendKeys(enterLastName, value);
+		return this;
 	}
-	public void enterEmailAddress(String value) {
+	public RegisterPage enterEmailAddress(String value) {
 		ElementUtils.sendKeys(enterEmailAddress, value);
+		return this;
 	}
-	public void enterPhoneNumber(String value) {
+	public RegisterPage enterPhoneNumber(String value) {
 		ElementUtils.sendKeys(enterPhoneNumber, value);
+		return this;
 	}
-	public void enterPassWord(String value) {
+	public RegisterPage enterPassWord(String value) {
 		ElementUtils.sendKeys(enterPassWord, value);
+		return this;
 	}
-	public void enterConfirmPassWord(String value) {
+	public RegisterPage enterConfirmPassWord(String value) {
 		ElementUtils.sendKeys(enterConfirmPassoWord, value);
+		return this;
 	}
-	public void privacyPolicyCheckBox() {
+	public RegisterPage privacyPolicyCheckBox() {
 		ElementUtils.click(privacyPolicyCheckBox);
+		return this;
 	}
 	public void continueButton() {
 		ElementUtils.click(continueButton);
