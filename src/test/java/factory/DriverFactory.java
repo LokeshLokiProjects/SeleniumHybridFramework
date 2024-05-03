@@ -1,4 +1,4 @@
-package driverfactory;
+package factory;
 
 import java.time.Duration;
 import java.util.Objects;

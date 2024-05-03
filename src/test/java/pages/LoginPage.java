@@ -26,7 +26,7 @@ public final class LoginPage {
 	}
 	
 	public String verifyWarrningMessage() {
-		return ElementUtils.getLocatorText(verifyWarrningMessage);
+		return ElementUtils.getText(verifyWarrningMessage);
 	}
 
 }

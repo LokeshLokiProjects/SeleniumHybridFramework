@@ -11,7 +11,7 @@ public class LoginSuccessPage {
 	
 	
 	public String verifyMyaccount() {
-		return ElementUtils.getLocatorText(verifyMyAccount);
+		return ElementUtils.getText(verifyMyAccount);
 	}
 
 }

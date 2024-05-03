@@ -3,7 +3,7 @@ package tests;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import driverfactory.DriverFactory;
+import factory.DriverFactory;
 import utlis.PropUtils;
 
 public class BaseTest {

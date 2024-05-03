@@ -9,22 +9,39 @@ public final class FrameConstants {
 //	
 	private static final long IMPLICTWAIT = 30;
 	private static final long PAGELOADTIME = 10;
+	private static final String EXTENTREPORTPATH = System.getProperty("user.dir")
+			+ "/src/test/resources/report/index.html";
 //	private static final int WEBDRIVERWAIT = 10;
-
 	private static final String CONFIGFILEPATH = System.getProperty("user.dir")
 			+ "\\src\\test\\resources\\config.properties";
+	private static final String EXTENTDOCUMENTTITLE = "Practice Automation Report";
+	private static final String EXTENTREPORTNAME = "Selenium Automation Report";
 
-//	public static int getWebdriverwait() {
+	public static String getExtentdocumenttitle() {
+		return EXTENTDOCUMENTTITLE;
+	}
+
+	public static String getExtentreportname() {
+		return EXTENTREPORTNAME;
+	}
+
+	// public static int getWebdriverwait() {
 //		return WEBDRIVERWAIT;
 //	}
 	public static String getConfigfilepath() {
 		return CONFIGFILEPATH;
 	}
+
 	public static long getImplictwait() {
 		return IMPLICTWAIT;
 	}
+
 	public static long getPageloadtime() {
 		return PAGELOADTIME;
+	}
+
+	public static String getExtentreportpath() {
+		return EXTENTREPORTPATH;
 	}
 
 }

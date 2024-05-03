@@ -11,7 +11,7 @@ public class AccountSuccesPage {
 	
 	
 	public String verifyAccountCreationMessage() {
-		return ElementUtils.getLocatorText(verifyAccountCreationMessage);
+		return ElementUtils.getText(verifyAccountCreationMessage);
 	}
 	
 }
