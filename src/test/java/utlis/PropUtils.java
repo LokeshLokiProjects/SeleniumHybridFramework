@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+import enums.ConfigFileKeys;
 import frameconstans.FrameConstants;
 
 public final class PropUtils {
@@ -40,9 +41,9 @@ public final class PropUtils {
 //		return ResourceBundle.getBundle("config").getString(value).toLowerCase().trim();
 //	}
 
-	public static String getKey(String key) {
+	public static String getKey(ConfigFileKeys key) {
 
-		return CONFIGMAP.get(key);
+		return CONFIGMAP.get(key.toString().toLowerCase());
 	}
 
 }

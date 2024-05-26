@@ -5,10 +5,9 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
-          <include name="invalidIdValidPassword3"/>
           <include name="invalidIdValidPassword"/>
-          <include name="invalidIdValidPassword2"/>
           <include name="tearDown"/>
+          <include name="validIdInvalidPassword"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- tests.LoginTest -->

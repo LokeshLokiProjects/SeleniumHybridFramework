@@ -16,6 +16,7 @@ public final class FrameConstants {
 			+ "\\src\\test\\resources\\config.properties";
 	private static final String EXTENTDOCUMENTTITLE = "Practice Automation Report";
 	private static final String EXTENTREPORTNAME = "Selenium Automation Report";
+	private static final String JSONFILEPATH = System.getProperty("user.dir") + "/src/test/resources/data.json";
 
 	public static String getExtentdocumenttitle() {
 		return EXTENTDOCUMENTTITLE;
@@ -23,6 +24,10 @@ public final class FrameConstants {
 
 	public static String getExtentreportname() {
 		return EXTENTREPORTNAME;
+	}
+
+	public static String getJsonFilePath() {
+		return JSONFILEPATH;
 	}
 
 	// public static int getWebdriverwait() {

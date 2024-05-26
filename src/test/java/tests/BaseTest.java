@@ -3,6 +3,7 @@ package tests;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import enums.ConfigFileKeys;
 import factory.DriverFactory;
 import utlis.PropUtils;
 
@@ -14,7 +15,7 @@ public class BaseTest {
 	
 	@BeforeMethod
 	public void setUp() {
-		DriverFactory.initDriver(PropUtils.getKey("browsername"));
+		DriverFactory.initDriver(PropUtils.getKey(ConfigFileKeys.BROWSERNAME));
 	}
 	
 	@AfterMethod

@@ -9,6 +9,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ThreadGuard;
 
+import enums.ConfigFileKeys;
 import frameconstans.FrameConstants;
 import utlis.PropUtils;
 
@@ -38,7 +39,7 @@ public final class DriverFactory {
 		if(browserName.equalsIgnoreCase("chrome")) setDriver(ThreadGuard.protect(new ChromeDriver()));
 		else if(browserName.equalsIgnoreCase("firefox")) setDriver(ThreadGuard.protect(new FirefoxDriver()));
 		else if(browserName.equalsIgnoreCase("edge")) setDriver(ThreadGuard.protect(new EdgeDriver()));
-		getDriver().get(PropUtils.getKey("url"));
+		getDriver().get(PropUtils.getKey(ConfigFileKeys.URL));
 		getDriver().manage().window().maximize();
 		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(FrameConstants.getImplictwait()));
 		getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(FrameConstants.getPageloadtime()));

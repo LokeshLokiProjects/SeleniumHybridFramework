@@ -30,7 +30,6 @@ public final class LoginTest extends BaseTest {
 		Assertions.assertThat(new LoginPage().verifyWarrningMessage())
 				.isEqualTo("Warning: No match for E-Mail Address and/or Password.");
 	}
-
 	
 
 	@Test
