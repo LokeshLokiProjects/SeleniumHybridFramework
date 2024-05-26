@@ -11,14 +11,17 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public final class DataProviderExtracter {
+import enums.ExcelKeys;
+import frameconstans.FrameConstants;
+
+public final class ExcelDataExtractor {
 	
-	private DataProviderExtracter() {}
+	private ExcelDataExtractor() {}
 
 	@DataProvider
 	public Object[] excelLoginTestDataExtractor() throws FileNotFoundException, IOException {
 		
-		try (XSSFWorkbook workbook = new XSSFWorkbook(new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/logintestdata.xlsx"))) {
+		try (XSSFWorkbook workbook = new XSSFWorkbook(new FileInputStream(FrameConstants.getLogintestdataexcelpath()))) {
 			XSSFSheet sheet = workbook.getSheet("Sheet1");
 			int rownum = sheet.getLastRowNum();
 			int columnnum = sheet.getRow(0).getLastCellNum();
@@ -44,7 +47,7 @@ public final class DataProviderExtracter {
 	@DataProvider
 	public Object[] excelRegisterTestDataExtractor() throws FileNotFoundException, IOException {
 		
-		try (XSSFWorkbook workbook = new XSSFWorkbook(new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/registertestdata.xlsx"))) {
+		try (XSSFWorkbook workbook = new XSSFWorkbook(new FileInputStream(FrameConstants.getRegisterdataexcelpath()))) {
 			XSSFSheet sheet = workbook.getSheet("Sheet1");
 			DataFormatter formatter = new DataFormatter();
 			int rownum = sheet.getLastRowNum();
@@ -66,6 +69,14 @@ public final class DataProviderExtracter {
 			
 			return data;
 		}
+	}
+	
+	
+	@Test(dataProvider = "excelLoginTestDataExtractor")
+	public void test(HashMap<String,String> data) {
+		
+		System.out.println(data.get(ExcelKeys.PASSWORD.toString().toLowerCase()));
+		System.out.println(data.get(ExcelKeys.USERNAME.toString().toLowerCase()));
 	}
 	
 	

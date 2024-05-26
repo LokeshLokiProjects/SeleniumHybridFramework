@@ -17,6 +17,18 @@ public final class FrameConstants {
 	private static final String EXTENTDOCUMENTTITLE = "Practice Automation Report";
 	private static final String EXTENTREPORTNAME = "Selenium Automation Report";
 	private static final String JSONFILEPATH = System.getProperty("user.dir") + "/src/test/resources/data.json";
+	private static final String LOGINTESTDATAEXCELPATH = System.getProperty("user.dir")
+			+ "/src/test/resources/logintestdata.xlsx";
+	private static final String REGISTERDATAEXCELPATH = System.getProperty("user.dir")
+			+ "/src/test/resources/registertestdata.xlsx";
+
+	public static String getLogintestdataexcelpath() {
+		return LOGINTESTDATAEXCELPATH;
+	}
+
+	public static String getRegisterdataexcelpath() {
+		return REGISTERDATAEXCELPATH;
+	}
 
 	public static String getExtentdocumenttitle() {
 		return EXTENTDOCUMENTTITLE;
