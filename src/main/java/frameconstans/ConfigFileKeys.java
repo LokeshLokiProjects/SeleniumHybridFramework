@@ -1,4 +1,4 @@
-package enums;
+package frameconstans;
 
 public enum ConfigFileKeys {
 	

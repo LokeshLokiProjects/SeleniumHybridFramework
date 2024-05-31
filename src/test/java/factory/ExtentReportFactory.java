@@ -37,18 +37,18 @@ public final class ExtentReportFactory {
 	public static void initReport() {
 		if (Objects.isNull(extentReport)) {
 			extentReport = new ExtentReports();
-			ExtentSparkReporter spark = new ExtentSparkReporter(new File(FrameConstants.getExtentreportpath()));
+			ExtentSparkReporter spark = new ExtentSparkReporter(new File(FrameConstants.EXTENTREPORTPATH.getStringValue()));
 			extentReport.attachReporter(spark);
 			spark.config().setTheme(Theme.DARK);
-			spark.config().setDocumentTitle(FrameConstants.getExtentdocumenttitle());
-			spark.config().setReportName(FrameConstants.getExtentreportname());
+			spark.config().setDocumentTitle(FrameConstants.EXTENTDOCUMENTTITLE.getStringValue());
+			spark.config().setReportName(FrameConstants.EXTENTREPORTNAME.getStringValue());
 		}
 	}
 
 	public static void tearDownReport() throws IOException {
 		if (Objects.nonNull(extentReport)) {
 			extentReport.flush();
-			Desktop.getDesktop().browse(new File(FrameConstants.getExtentreportpath()).toURI());
+			Desktop.getDesktop().browse(new File(FrameConstants.EXTENTREPORTPATH.getStringValue()).toURI());
 		}
 	}
 

@@ -9,8 +9,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ThreadGuard;
 
-import enums.BrowserSets;
-import enums.ConfigFileKeys;
+import frameconstans.ConfigFileKeys;
 import frameconstans.FrameConstants;
 import utlis.PropUtils;
 
@@ -37,13 +36,13 @@ public final class DriverFactory {
 	public static void initDriver(String browserName) {
 		
 		if(Objects.isNull(getDriver())) {
-		if(browserName.equalsIgnoreCase(BrowserSets.CHROME.toString().toLowerCase())) setDriver(ThreadGuard.protect(new ChromeDriver()));
-		else if(browserName.equalsIgnoreCase(BrowserSets.FIREFOX.toString().toLowerCase())) setDriver(ThreadGuard.protect(new FirefoxDriver()));
-		else if(browserName.equalsIgnoreCase(BrowserSets.EDGE.toString().toLowerCase())) setDriver(ThreadGuard.protect(new EdgeDriver()));
+		if(browserName.equalsIgnoreCase("chrome")) setDriver(ThreadGuard.protect(new ChromeDriver()));
+		else if(browserName.equalsIgnoreCase("firefox")) setDriver(ThreadGuard.protect(new FirefoxDriver()));
+		else if(browserName.equalsIgnoreCase("edge")) setDriver(ThreadGuard.protect(new EdgeDriver()));
 		getDriver().get(PropUtils.getKey(ConfigFileKeys.URL));
 		getDriver().manage().window().maximize();
-		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(FrameConstants.getImplictwait()));
-		getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(FrameConstants.getPageloadtime()));
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(FrameConstants.IMPLICTWAIT.getIntValue()));
+		getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(FrameConstants.PAGELOADTIME.getIntValue()));
 		}
 	
 	}

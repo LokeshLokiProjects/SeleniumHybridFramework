@@ -3,8 +3,8 @@ package tests;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import enums.ConfigFileKeys;
 import factory.DriverFactory;
+import frameconstans.ConfigFileKeys;
 import utlis.PropUtils;
 
 public class BaseTest {

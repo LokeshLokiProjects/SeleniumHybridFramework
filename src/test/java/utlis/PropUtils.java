@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-import enums.ConfigFileKeys;
+import frameconstans.ConfigFileKeys;
 import frameconstans.FrameConstants;
 
 public final class PropUtils {
@@ -21,7 +21,7 @@ public final class PropUtils {
 
 	static {
 		try {
-			FileInputStream fis = new FileInputStream(FrameConstants.getConfigfilepath());
+			FileInputStream fis = new FileInputStream(FrameConstants.CONFIGFILEPATH.getStringValue());
 			configProp.load(fis);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
