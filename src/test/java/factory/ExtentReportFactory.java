@@ -11,8 +11,10 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import frameconstans.ConfigFileKeys;
 import frameconstans.FrameConstants;
-import utlis.ScreenShotUtils;
+import utlis.PropUtils;
+import utlis.FrameUtils;
 
 public final class ExtentReportFactory {
 
@@ -48,18 +50,21 @@ public final class ExtentReportFactory {
 	public static void tearDownReport() throws IOException {
 		if (Objects.nonNull(extentReport)) {
 			extentReport.flush();
+			removeExtentTest();
 			Desktop.getDesktop().browse(new File(FrameConstants.EXTENTREPORTPATH.getStringValue()).toURI());
 		}
 	}
 
 	public static void fail(String message) {
 		getExtentTest().fail(message,
-				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShotUtils.getBase64Image()).build());
+				MediaEntityBuilder.createScreenCaptureFromBase64String(FrameUtils.getBase64Image()).build());
+
 	}
 
 	public static void pass(String message) {
+		
 		getExtentTest().pass(message,
-				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShotUtils.getBase64Image()).build());
+				MediaEntityBuilder.createScreenCaptureFromBase64String(FrameUtils.getBase64Image()).build());
 	}
 
 	public static void skip(String message) {
